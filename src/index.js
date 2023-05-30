@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+// import './index.css';
+import { provider } from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
