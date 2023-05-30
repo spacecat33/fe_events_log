@@ -4,18 +4,19 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
 import Home from './components/Home';
-import Error from './components/Error';
+import ErrorPage from './components/ErrorPage';
 
 class App extends Component {
   render() {
     return (
       <Router> 
-         <Nav>
+         <Nav />
           <Switch>
             <Route exact path="/" component={ Home } />
-            <Route component={ Error} />
+            <Route component={ ErrorPage } />
+         
+          
           </Switch>
-        </Nav>
           <Footer />
       </Router>
     );

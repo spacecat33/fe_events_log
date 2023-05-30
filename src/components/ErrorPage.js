@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 
-class Error extends Component {
+class ErrorPage extends Component {
   render() {
     return (
-      <div className="Error">
+      <div className="ErrorPage">
         ERROR - Something went wrong!
       </div>
     );
   }
 }
 
-export default Error;
+export default ErrorPage;
