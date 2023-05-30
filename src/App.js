@@ -1,5 +1,6 @@
 // import './App.css';
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 class App extends Component {
   render() {
@@ -8,7 +9,7 @@ class App extends Component {
         <h1>Hello World</h1>
       </div>
     );
-    }
+  }
 }
 
 export default App;
