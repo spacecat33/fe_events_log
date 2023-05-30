@@ -1,0 +1,3 @@
+const eventsReducer = (state, action) => {
+    
+}
