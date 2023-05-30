@@ -5,6 +5,7 @@ import Nav from './components/Nav';
 import Footer from './components/Footer';
 import Home from './components/Home';
 import ErrorPage from './components/ErrorPage';
+import About from './components/About';
 
 class App extends Component {
   render() {
@@ -12,11 +13,14 @@ class App extends Component {
       <Router> 
          <Nav />
           <Switch>
+
             <Route exact path="/" component={ Home } />
+            <Route exact path="/about" component={ About } />
             <Route component={ ErrorPage } />
          
           
           </Switch>
+          
           <Footer />
       </Router>
     );
