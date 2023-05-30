@@ -3,8 +3,8 @@ const initialState = {
     loading: true
 }
 
-const eventsReducer = (state, action) => {
-    switch(action, type) {
+const eventsReducer = (state=initialState, action) => {
+    switch(action.type) {
         default:
             return state;
     }

@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 // import './index.css';
-import { provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware } from 'redux'; //should it be configureStore?
 import thunk from 'redux-thunk';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
