@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux;'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { getEvents } from './actions/eventsIndex';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
 import Home from './components/Home';
@@ -9,10 +10,19 @@ import About from './components/About';
 import eventsIndex from './components/eventsIndex';
 import ErrorPage from './components/ErrorPage';
 
-
+componentDidMount() {
+  this.
+}
 
 class App extends Component {
   render() {
+
+    if (this.props.loading) {
+      return (
+        <h3>Loading...</h3>
+      )
+    }
+
     return (
       <Router> 
          <Nav />
@@ -38,4 +48,4 @@ const MapStateToProps = state => {
   }
 }
 
-export default connect(MapStateToProps, {getEvents})(App);
+export default connect(MapStateToProps, { getEvents })(App);
