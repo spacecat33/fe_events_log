@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import Home from './components/Home';
 import ErrorPage from './components/ErrorPage';
 import About from './components/About';
+import Index from './components/Index';
 
 class App extends Component {
   render() {
@@ -16,11 +17,12 @@ class App extends Component {
 
             <Route exact path="/" component={ Home } />
             <Route exact path="/about" component={ About } />
+            <Route exact path="/events" component={ Index } />
             <Route component={ ErrorPage } />
          
           
           </Switch>
-          
+
           <Footer />
       </Router>
     );
