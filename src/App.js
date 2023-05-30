@@ -6,7 +6,7 @@ import Nav from './components/Nav';
 import Footer from './components/Footer';
 import Home from './components/Home';
 import About from './components/About';
-import Index from './components/Index';
+import eventsIndex from './components/eventsIndex';
 import ErrorPage from './components/ErrorPage';
 
 
@@ -20,7 +20,7 @@ class App extends Component {
 
             <Route exact path="/" component={ Home } />
             <Route exact path="/about" component={ About } />
-            <Route exact path="/events" component={ Index } />
+            <Route exact path="/events" component={ eventsIndex } />
             <Route component={ ErrorPage } />
          
           

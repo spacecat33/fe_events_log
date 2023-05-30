@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 
-class Index extends Component {
+class eventsIndex extends Component {
   render() {
     return (
-      <div className="Index">
+      <div className="eventsIndex">
         List of Events
       </div>
     );
   }
 }
 
-export default Index;
+export default eventsIndex;
