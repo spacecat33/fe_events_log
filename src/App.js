@@ -32,4 +32,10 @@ class App extends Component {
   }
 }
 
-export default connect(null, {getEvents})(App);
+const MapStateToProps = state => {
+  return {
+    loading: state.loading
+  }
+}
+
+export default connect(MapStateToProps, {getEvents})(App);
