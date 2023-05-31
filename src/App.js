@@ -9,10 +9,12 @@ import Home from './components/Home';
 import About from './components/About';
 import eventsIndex from './components/eventsIndex';
 import ErrorPage from './components/ErrorPage';
+import Form from '.components/Form';
 
 
 
 class App extends Component {
+
   componentDidMount() {
     this.props.getEvents();
   }
@@ -33,11 +35,10 @@ render() {
             <Route exact path="/" component={ Home } />
             <Route exact path="/about" component={ About } />
             <Route exact path="/events" component={ eventsIndex } />
+            <Route exact path="/events/new" component={ Form } />
             <Route component={ ErrorPage } />
-         
-          
+                      
           </Switch>
-
           <Footer />
       </Router>
     );
