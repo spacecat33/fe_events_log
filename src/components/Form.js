@@ -3,6 +3,14 @@ import { connect } from 'react-redux';
 import { addEvent } from '../actions/eventsIndex';
 
 class Form extends Component {
+  state = {
+    title: "",
+    month: "",
+    date: "",
+    diary: ""
+  }
+
+  
   render() {
     return (
       <div>
