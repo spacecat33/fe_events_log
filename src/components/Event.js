@@ -5,14 +5,11 @@ class Event extends Component {
     const { title, month, country, diary } = this.props;
     return (
       <div>
-        Events:
-        <ul>
-          <li>
-        <h3> { title } </h3>
-        <p> { month } </p>
-        <p> { country } </p>
-        <p> { diary } </p>       
-          </li>
+<h3> Event name: { title } </h3>
+       <ul> 
+          <p> Date: { month } </p>
+        <p> Where: { country } </p>
+        <p> My record: { diary } </p>       
         </ul>
       </div>
     );

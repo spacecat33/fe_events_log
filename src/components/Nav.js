@@ -10,6 +10,7 @@ class Nav extends Component {
           <li><Link to="/">Home</Link></li>
           <li><Link to="/about">About</Link></li>
           <li><Link to="/events">Events</Link></li>
+          <li><Link to="/events/new">Create Event</Link></li>
         </ul>
       </div>
     );

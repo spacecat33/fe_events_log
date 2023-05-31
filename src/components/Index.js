@@ -4,7 +4,7 @@ import Event from './Event';
 
 class Index extends Component {
   render() {
-    const events = this.props.events.map( (event, i) => <Event key={i} title={ event.title } date={ event.month } country={ event.country } diary={ event.diary } />)
+    const events = this.props.events.map( (event, i) => <Event key={i} title={ event.title } month={ event.month } country={ event.country } diary={ event.diary } />)
     
     return (
       <div>

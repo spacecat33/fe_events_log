@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { addEvent } from '../actions';
+import { addEvent } from '../actions/Index';
 
 class Form extends Component {
   state = {
     title: "",
     month: "",
-    date: "",
+    country: "",
     diary: ""
   }
 

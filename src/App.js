@@ -1,15 +1,15 @@
 // import './App.css';
 import React, { Component } from 'react';
-import { connect } from 'react-redux;'
+import { connect } from 'react-redux';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { getEvents } from './actions';
+import { getEvents } from './actions/Index';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
 import Home from './components/Home';
 import About from './components/About';
 import Index from './components/Index';
 import ErrorPage from './components/ErrorPage';
-import Form from '.components/Form';
+import Form from './components/Form';
 
 
 
