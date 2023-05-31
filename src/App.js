@@ -29,7 +29,7 @@ render() {
 
     return (
       <Router> 
-         <Nav />
+      
           <Switch>
 
             <Route exact path="/" component={ Home } />
@@ -38,7 +38,8 @@ render() {
             <Route exact path="/events/new" component={ Form } />
             <Route component={ ErrorPage } />
 
-          </Switch>
+          </Switch>  
+          <Nav />
           <Footer />
       </Router>
     );
