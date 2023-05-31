@@ -17,6 +17,12 @@ class Form extends Component {
     })
   }
 
+  handleSubmit = e => {
+    e.preventDefault();
+
+    this.props.addEvent(this.state, this.props.history);
+  }
+
   render() {
     return (
       <div>
@@ -49,4 +55,4 @@ class Form extends Component {
   }
 }
 
-export default Form;
+export default connect(null, { addEvent })(Form);
