@@ -1,7 +1,29 @@
+## Back_end API:
+
+https://github.com/spacecat33/be_events_log 
+
+## Events_log
+
+Welcome to the my events_log app, where you can make your own diary entries of events that you have been to and save them in your api database!
+
+To start, please note that this app uses version 5 of React-Router-Dom. If when you run:
+
+    $ npm start 
+
+as per the guidance below titled 'Getting Started with Create React App' you hit an error, e.g. 'switch' not found, you can try running:
+
+    $ npm install react-router-dom@5 
+
+This will update the package.json to version 5 for you. 
+
+Ideally you'd update the code to match the most current version but in meantime, the command above should help you view this app.
+
+You will see a 'Loading' message on the webpage after running $npm start. If so, you will need to run the rails api (noted at the top of this page) at the same time by running $rails s in order to see all diary entries and use the app.
+
+Enjoy!
 
 
-
-
+# More information on 'Create React App':
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
