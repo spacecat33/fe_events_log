@@ -1,4 +1,4 @@
-// import './App.css';
+import './App.css';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
@@ -36,6 +36,7 @@ render() {
             <Route exact path="/about" component={ About } />
             <Route exact path="/events" component={ Index } />
             <Route exact path="/events/new" component={ Form } />
+            {/* <Route path="/event/:eventId" component={ Home } /> */}
             <Route component={ ErrorPage } />
 
           </Switch>  

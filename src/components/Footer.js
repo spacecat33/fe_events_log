@@ -11,3 +11,19 @@ class Footer extends Component {
 }
 
 export default Footer;
+
+// or 
+// function Footer(props) {
+//   return (
+//     <div>
+//             &copy; Property of Events App Creator
+//         </div>
+//     );
+// }
+
+// or
+// const Footer = (props) => (
+//     <div>
+//       &copy; Property of Events App Creator
+//     </div>
+// );

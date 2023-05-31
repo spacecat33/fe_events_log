@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
+import { getFunName } from '../helpers';
 
 class About extends Component {
   render() {
     return (
       <div className="About">
        
-        <h3>About Events App</h3>
+       <h3>About Events App</h3>
+        <h2>Beware! Some events are weirdly named like so...</h2> 
+        <input type="text" required placeholder="Random Event Name" defaultValue={getFunName()} />
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lacus dui, dictum nec nisl quis, aliquet commodo sapien. Ut lobortis viverra purus, id efficitur neque porttitor nec. In dolor sapien, semper quis ornare vitae, accumsan eget metus. Mauris ullamcorper venenatis ante id faucibus. Donec placerat, lorem sed lacinia elementum, arcu mi rutrum nulla, sit amet mattis velit mauris sed nunc. Aenean eget venenatis massa. Morbi aliquet, urna eget consequat sollicitudin, lorem lorem condimentum arcu, et iaculis augue lorem at libero. Suspendisse potenti. Vestibulum efficitur tortor nulla, in ultricies odio auctor vel. Morbi ullamcorper enim ex, sed faucibus odio consectetur vel. Suspendisse dapibus faucibus porta. Quisque sed ipsum ante. Donec aliquam sit amet tortor bibendum posuere. In quis risus non odio feugiat rhoncus eu at tellus.
 
