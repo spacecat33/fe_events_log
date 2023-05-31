@@ -10,12 +10,14 @@ import About from './components/About';
 import eventsIndex from './components/eventsIndex';
 import ErrorPage from './components/ErrorPage';
 
-componentDidMount() {
-  this.
-}
+
 
 class App extends Component {
-  render() {
+  componentDidMount() {
+    this.props.getEvents();
+  }
+
+render() {
 
     if (this.props.loading) {
       return (
