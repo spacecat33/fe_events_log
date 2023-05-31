@@ -2,12 +2,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux;'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { getEvents } from './actions/eventsIndex';
+import { getEvents } from './actions';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
 import Home from './components/Home';
 import About from './components/About';
-import eventsIndex from './components/eventsIndex';
+import Index from './components/Index';
 import ErrorPage from './components/ErrorPage';
 import Form from '.components/Form';
 
@@ -34,10 +34,10 @@ render() {
 
             <Route exact path="/" component={ Home } />
             <Route exact path="/about" component={ About } />
-            <Route exact path="/events" component={ eventsIndex } />
+            <Route exact path="/events" component={ Index } />
             <Route exact path="/events/new" component={ Form } />
             <Route component={ ErrorPage } />
-                      
+
           </Switch>
           <Footer />
       </Router>

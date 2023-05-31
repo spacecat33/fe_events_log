@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { addEvent } from '../actions/eventsIndex';
+import { addEvent } from '../actions';
 
 class Form extends Component {
   state = {
@@ -35,12 +35,12 @@ class Form extends Component {
           <br />
           <div>
             <p><label htmlFor="month">Date</label></p>
-            <textarea id="month" name="month" value={ this.state.month } onChange={ this.handleChange }>
+            <textarea id="month" name="month" value={ this.state.month } onChange={ this.handleChange }/>
           </div>
           <br />
           <div>
             <p><label htmlFor="country">Country</label></p>
-            <textarea id="country" name="country" value={ this.state.country } onChange={ this.handleChange }>
+            <textarea id="country" name="country" value={ this.state.country } onChange={ this.handleChange }/>
           </div>
           <br />
           <div>
@@ -55,4 +55,5 @@ class Form extends Component {
   }
 }
 
-export default connect(null, { addEvent })(Form);
+
+export default connect(null, { addEvent })(Form)

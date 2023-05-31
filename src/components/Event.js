@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class Event extends Component {
   render() {
-    const { title, month, country, diary } = this.props
+    const { title, month, country, diary } = this.props;
     return (
       <div>
         Events:

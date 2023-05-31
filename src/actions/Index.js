@@ -5,9 +5,10 @@ export const getEvents = () => {
         .then(resp => resp.json())
         .then(events => dispatch({ type: "SET_EVENTS", events }))
     }
+}
 
-    export const addEvent = (event, history) => {
-        return dispatch => {
+export const addEvent = (event, history) => {
+    return dispatch => {
             fetch('http://localhost:3001/events', {
                 method: "POST",
                 headers: {
@@ -18,9 +19,8 @@ export const getEvents = () => {
             })
             .then(resp => resp.json())
             .then(event => {
-                dispatch({ type: "ADD EVENT", event})
+                dispatch({ type: "ADD_EVENT", event })
                 history.push("/events")
             })
-        }
     }
 }
