@@ -7,7 +7,7 @@ class About extends Component {
       <div className="About">
        
        <h3>About Events App</h3>
-        <h2>Beware! Some events are weirdly named like so...</h2> 
+        <h2>Beware! Some events I have unexpectedly attended are weirdly named like so...</h2> 
         <input type="text" required placeholder="Random Event Name" defaultValue={getFunName()} />
           <p>
             
