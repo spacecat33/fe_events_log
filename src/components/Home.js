@@ -5,7 +5,7 @@ class Home extends Component {
     return (
       <div>
         Welcome to my app showing all events I've been to this year!
-        
+        <br />
         This is the Home Page. You've landed in the right place!
       </div>
     );

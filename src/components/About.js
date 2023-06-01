@@ -10,6 +10,16 @@ class About extends Component {
         <h2>Beware! Some events are weirdly named like so...</h2> 
         <input type="text" required placeholder="Random Event Name" defaultValue={getFunName()} />
           <p>
+            
+           Throughtout my coding studies, I have had to travel for family or work and also renovated a house, requiring me to live in different locations and just had a lot going on!
+
+           I have created this app to help me keep track of all my life events, a little like a diary whilst helping me to practice my coding skills.
+
+           Welcome to my very public diary!
+
+            <br />
+            
+            
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lacus dui, dictum nec nisl quis, aliquet commodo sapien. Ut lobortis viverra purus, id efficitur neque porttitor nec. In dolor sapien, semper quis ornare vitae, accumsan eget metus. Mauris ullamcorper venenatis ante id faucibus. Donec placerat, lorem sed lacinia elementum, arcu mi rutrum nulla, sit amet mattis velit mauris sed nunc. Aenean eget venenatis massa. Morbi aliquet, urna eget consequat sollicitudin, lorem lorem condimentum arcu, et iaculis augue lorem at libero. Suspendisse potenti. Vestibulum efficitur tortor nulla, in ultricies odio auctor vel. Morbi ullamcorper enim ex, sed faucibus odio consectetur vel. Suspendisse dapibus faucibus porta. Quisque sed ipsum ante. Donec aliquam sit amet tortor bibendum posuere. In quis risus non odio feugiat rhoncus eu at tellus.
 
             Duis quam turpis, ornare vitae vestibulum sed, luctus nec lorem. Donec et urna eros. Phasellus tristique nisi lacus, in rutrum ligula ornare at. Maecenas dapibus augue quis nisi lacinia, id euismod augue iaculis. Vestibulum dapibus sit amet velit et volutpat. Nullam sed laoreet arcu. Nulla finibus lacinia gravida. Etiam et pulvinar libero, eget pharetra leo. Nullam eu convallis velit.
