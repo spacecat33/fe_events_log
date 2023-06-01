@@ -10,6 +10,7 @@ class Index extends Component {
       <div>
         List of Events
         { events }
+        <h3>Total Events: {this.props.eventCount}</h3>
       </div>
     );
   }
@@ -17,7 +18,8 @@ class Index extends Component {
 
 const mapStateToProps = state => {
   return {
-    events: state.events
+    events: state.events,
+    eventCount: state.events.length
   }
 }
 
