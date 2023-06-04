@@ -22,7 +22,7 @@ class App extends Component {
 
 render() {
 
-    console.log("rendering post mounting", this.props.events);
+    console.log("rendering post mounting", this.props.loading);
     if (this.props.loading) {
       return (
         <h3>Loading...</h3>
@@ -50,7 +50,9 @@ render() {
 }
 
 const MapStateToProps = state => {
+  console.log('mapstatetoprops')
   return {
+    events: state.events,
     loading: state.loading
   }
 }
