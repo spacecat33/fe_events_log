@@ -2,7 +2,7 @@ import './App.css';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { getEvents } from './actions/Index';
+import { getEvents } from './reducers/eventsReducer';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
 import Home from './components/Home';
@@ -16,22 +16,24 @@ import Form from './components/Form';
 class App extends Component {
 
   componentDidMount() {
+    console.log("mounting", this.props);
     this.props.getEvents();
   }
 
 render() {
 
-    if (this.props.loading) {
-      return (
-        <h3>Loading...</h3>
-      )
-    }
+    console.log("rendering post mounting", this.props.events);
+    // if (this.props.loading) {
+    //   return (
+    //     <h3>Loading...</h3>
+    //   )
+    // }
 
     return (
       <Router> 
-      
-          <Switch>
 
+          <Switch>
+        
             <Route exact path="/" component={ Home } />
             <Route exact path="/about" component={ About } />
             <Route exact path="/events" component={ Index } />
@@ -53,4 +55,10 @@ const MapStateToProps = state => {
   }
 }
 
-export default connect(MapStateToProps, { getEvents })(App);
+const mapDispatchToProps = (dispatch) => {
+  return {
+    getEvents: () => dispatch(getEvents()),
+  };
+};
+
+export default connect(MapStateToProps, mapDispatchToProps)(App);

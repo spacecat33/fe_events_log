@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { addEvent } from '../actions/Index';
+import { addEvent } from '../reducers/eventsReducer';
 
 class Form extends Component {
   state = {
@@ -12,12 +12,14 @@ class Form extends Component {
 
   
   handleChange = e => {
+    console.log("added data to form") 
     this.setState({
       [e.target.name]: e.target.value
     })
   }
 
   handleSubmit = e => {
+    console.log("submitted form and called addEvent") 
     e.preventDefault();
 
     this.props.addEvent(this.state, this.props.history);
