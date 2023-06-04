@@ -23,11 +23,11 @@ class App extends Component {
 render() {
 
     console.log("rendering post mounting", this.props.events);
-    // if (this.props.loading) {
-    //   return (
-    //     <h3>Loading...</h3>
-    //   )
-    // }
+    if (this.props.loading) {
+      return (
+        <h3>Loading...</h3>
+      )
+    }
 
     return (
       <Router> 
