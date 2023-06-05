@@ -22,7 +22,8 @@ class Index extends Component {
 const mapStateToProps = state => {
   return {
     events: state.events,
-    eventCount: state.events.length
+    eventCount: state.events.length,
+    attendees: state.attendees
   }
 }
 
