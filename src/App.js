@@ -1,7 +1,7 @@
 import './App.css';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import { getEvents } from './reducers/eventsReducer';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
@@ -10,6 +10,7 @@ import About from './components/About';
 import Index from './components/Index';
 import ErrorPage from './components/ErrorPage';
 import Form from './components/Form';
+import EventShow from './components/EventShow';
 
 
 
@@ -21,7 +22,8 @@ class App extends Component {
   }
 
 render() {
-
+  const { id, title, month, country, diary } = this.props;
+  console.log("this.props", this.props)
     console.log("rendering post mounting", this.props.loading);
     if (this.props.loading) {
       return (
@@ -38,7 +40,7 @@ render() {
             <Route exact path="/about" component={ About } />
             <Route exact path="/events" component={ Index } />
             <Route exact path="/events/new" component={ Form } />
-            {/* <Route path="/event/:eventId" component={ Home } /> */}
+            <Route path='/events/:id' component={ EventShow }  />
             <Route component={ ErrorPage } />
 
           </Switch>  
@@ -49,10 +51,11 @@ render() {
   }
 }
 
-const MapStateToProps = state => {
+const MapStateToProps = (state, ownProps) => {
   console.log('mapstatetoprops')
   return {
     events: state.events,
+    // id: ownProps.params.id,
     loading: state.loading
   }
 }
