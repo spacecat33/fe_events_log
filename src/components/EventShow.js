@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Index from "./Index.js";
+import { params } from "react-router-dom";
 
 class Event extends Component {
     render() {
@@ -7,7 +8,7 @@ class Event extends Component {
     
      return (
         <div>
-            
+            <h2> The event object is {this.props.match.params.id} {this.props.match.params.title}</h2>
     console.log("this.props", {this.props.match.params.id})
              {/* <h3> Event name: { title } </h3>
           <ul>
