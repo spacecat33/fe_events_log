@@ -16,7 +16,7 @@ class Event extends Component {
       <div>
         <h3> Event name: { title } </h3>
           {/* <ul> id: { id } */}
-          <li><Link to={`/events/${ id }`} />{title} </li> 
+          {/* <li><Link to={`/events/${this.props.event.id}`} />{title} </li>  */}
             {/* <button onClick={() => this.handleDeleteClick()}>DELETE</button>   */}
          
       </div>

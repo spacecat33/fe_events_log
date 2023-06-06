@@ -55,6 +55,7 @@ const MapStateToProps = (state, ownProps) => {
   console.log('mapstatetoprops')
   return {
     events: state.events,
+    attendees: state.attendees,
     // id: ownProps.params.id,
     loading: state.loading
   }
