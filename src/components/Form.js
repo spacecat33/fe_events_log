@@ -8,6 +8,7 @@ class Form extends Component {
     month: "",
     country: "",
     diary: ""
+    // attendee: "",
   }
 
   
@@ -49,6 +50,11 @@ class Form extends Component {
             <p><label htmlFor="diary">Diary details:</label></p>
             <textarea id="diary" name="diary" value={ this.state.diary } onChange={ this.handleChange }></textarea>
           </div>
+
+          {/* <div>
+            <p><label htmlFor="attendee">Attendee details:</label></p>
+            <textarea id="attendee" name="attendee" value={ this.state.attendee } onChange={ this.handleChange }></textarea>
+          </div> */}
           <br />
           <input type="submit" value="Create Event" /><br />
         </form>

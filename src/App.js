@@ -52,6 +52,8 @@ render() {
   }
 }
 
+
+
 const MapStateToProps = (state) => {
   console.log('mapstatetoprops')
   return {

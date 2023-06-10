@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 import { params } from "react-router-dom";
-import index from "./Index"
+import Index from "./Index"
+import EventShow from "./EventShow";
 
 
 class Event extends Component {

@@ -1,18 +1,47 @@
 import React, { Component } from 'react';
 import Index from "./Index.js";
-import { params } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { connect } from 'react-redux';
 
 
+
+
 class EventShow extends Component {
+    
     render() {
-    // const { id, title, month, country, diary } = this.props;
+
+        // const event = this.props.events.find(event => event.id === this.props.match.params.id)
     
+        const eventId = this.props.match.params.id
+        console.log(typeof eventId)
+        console.log(eventId)
+        const num = parseInt(eventId, 10)
+        console.log(typeof num)
+        console.log(num)
+        const event = this.props.events.find(event => event.id === num )
+        console.log(event)
+
+    // const { id, title, month, country, diary, attendees } = this.props;
+    // console.log(this.props)
      return (
-        <div>
-            <h2> The event object is {this.props.match.params.id} {this.props.match.params.title}</h2>
-    console.log("this.props", {this.props.match.params.id})
+            <div>
+    {/* <h2> The event object is {this.props.match.params.id} {this.props.match.params.title}</h2>
+    console.log("this.props", {[this.props.match.params.id].title})
+{title} */}
+<li><ol>
+    {event.title}
+    {event.month}
+    {event.country}
+    {event.diary}
+    <ol>
+    {event.attendees.map(attendee => (<div><ol>attendee:{attendee.name} {attendee.company} {attendee.position}</ol></div>))}
+    </ol>
+    {/* <h3>Total Attendees: {this.props.attendeeCount}</h3> */}
+</ol></li>
+
+    {/* <h1>{this.props.match.params.event.title}</h1> */}
     
+    {/* const event = events.find(event => event.id === {this.props.match.params.id}) */}
     {/* this.props.events.findby( (event, i) => <Event key={ event.id } id={ event.id } title={ event.title } month={ event.month } country={ event.country } diary={ event.diary } attendees={event.attendees.map(attendee => (<div>attendee:{attendee.name} {attendee.company} {attendee.position}</div> ))} />); */}
     {/* use find id in params to find correct event and then show its attendees  - will need to convert string into integer from (this.props.match.params.id) using the parse funcion within the 'find' condition*/}
              {/* <h3> Event name: { title } </h3>
@@ -30,7 +59,8 @@ class EventShow extends Component {
 const mapStateToProps = state => {
     return {
       events: state.events,
-      eventCount: state.events.length,
+    //   attendeeCount: state.attendees.length,
+    //   event: state.events.events.find(event => event.id === parseInt(localStorage.getItem('id'))).at(-1)
     }
 }
   
