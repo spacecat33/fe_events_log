@@ -34,7 +34,7 @@ render() {
 
     return (
       <Router> 
-
+    <Nav />
           <Switch>
         
             <Route exact path="/" component={ Home } />
@@ -45,7 +45,7 @@ render() {
             <Route component={ ErrorPage } />
 
           </Switch>  
-          <Nav />
+        
           <Footer />
       </Router>
     );

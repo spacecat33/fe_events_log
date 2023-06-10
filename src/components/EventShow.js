@@ -28,16 +28,20 @@ class EventShow extends Component {
     {/* <h2> The event object is {this.props.match.params.id} {this.props.match.params.title}</h2>
     console.log("this.props", {[this.props.match.params.id].title})
 {title} */}
-<li><ol>
-    {event.title}
-    {event.month}
-    {event.country}
-    {event.diary}
-    <ol>
-    {event.attendees.map(attendee => (<div><ol>attendee:{attendee.name} {attendee.company} {attendee.position}</ol></div>))}
+<h2>Details of the event, {event.title}:</h2>
+<ol>
+    Event Title: {event.title} <br />
+    Date:    {event.month} <br />
+    Location: {event.country} <br /><br />
+    Attendees: {event.attendees.map(attendee => (<div><br /><li><ol>Name:{attendee.name} <br /> Position: {attendee.position} <br /> Company: {attendee.company}</ol></li></div>))}
+   <br /> <br />
+    My diary of the day: <br /> <br />
+     "{event.diary}""
     </ol>
+    
     {/* <h3>Total Attendees: {this.props.attendeeCount}</h3> */}
-</ol></li>
+
+
 
     {/* <h1>{this.props.match.params.event.title}</h1> */}
     
