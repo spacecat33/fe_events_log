@@ -14,9 +14,10 @@ class Event extends Component {
 // const Event = (props) => {
     return (
       <div>
-        <h3> Event name: { this.props.title } </h3>
+        {/* <h3> Event name: { this.props.title } </h3> */}
         <Link 
           to={`/events/${this.props.id}`}>
+            <ol><h3> { this.props.title } - {this.props.month} </h3></ol>
         </Link>
           {/* <ul> id: { id } */}
           {/* <li><Link to={`/events/${this.props.event.id}`} />{title} </li>  */}

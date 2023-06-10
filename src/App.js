@@ -11,6 +11,7 @@ import Index from './components/Index';
 import ErrorPage from './components/ErrorPage';
 import Form from './components/Form';
 import EventShow from './components/EventShow';
+import Attendee from './components/Attendee';
 
 
 
@@ -51,11 +52,10 @@ render() {
   }
 }
 
-const MapStateToProps = (state, ownProps) => {
+const MapStateToProps = (state) => {
   console.log('mapstatetoprops')
   return {
     events: state.events,
-    attendees: state.attendees,
     // id: ownProps.params.id,
     loading: state.loading
   }
