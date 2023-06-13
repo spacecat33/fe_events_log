@@ -66,6 +66,7 @@ const MapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     getEvents: () => dispatch(getEvents()),
+    
   };
 };
 

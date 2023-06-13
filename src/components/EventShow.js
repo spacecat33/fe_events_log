@@ -1,17 +1,18 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'; 
 import Index from "./Index.js";
 import { useParams } from "react-router-dom";
 import { connect } from 'react-redux';
+import Attendee from './Attendee';
+import { deleteAttendee } from '../reducers/eventsReducer';
 
 
-
-
+console.log("in eventshow")
 class EventShow extends Component {
-    
-    render() {
+  
+  
 
-        // const event = this.props.events.find(event => event.id === this.props.match.params.id)
-    
+    render() {
+      console.log("eventshow", this.props.match.params)
         const eventId = this.props.match.params.id
         console.log(typeof eventId)
         console.log(eventId)
@@ -20,24 +21,30 @@ class EventShow extends Component {
         console.log(num)
         const event = this.props.events.find(event => event.id === num )
         console.log(event)
+        console.log("event.attendees", event.attendees)
+        // debugger;
+        const attendee = event.attendees.filter(attendee => attendee.id === event.attendees[0].id)
+        console.log("attendee", attendee)
 
-    // const { id, title, month, country, diary, attendees } = this.props;
-    // console.log(this.props)
+//     // const { id, title, month, country, diary, attendees } = this.props;
+//     // console.log(this.props)
      return (
             <div>
-    {/* <h2> The event object is {this.props.match.params.id} {this.props.match.params.title}</h2>
-    console.log("this.props", {[this.props.match.params.id].title})
-{title} */}
+ {/* <h2> The event object is {this.props.match.params.id} {this.props.match.params.title}</h2>
+//     console.log("this.props", {[this.props.match.params.id].title})
+// {title} */}
 <h2>Details of the event, {event.title}:</h2>
 <ol>
-    Event Title: {event.title} <br />
-    Date:    {event.month} <br />
-    Location: {event.country} <br /><br />
-    Attendees: {event.attendees.map(attendee => (<div><br /><li><ol>Name:{attendee.name} <br /> Position: {attendee.position} <br /> Company: {attendee.company}</ol></li></div>))}
-   <br /> <br />
-    My diary of the day: <br /> <br />
-     "{event.diary}""
-    </ol>
+ Event Title: {event.title} <br />
+Date:    {event.month} <br />
+ Location: {event.country} <br /><br />
+ {event.attendees.map( (attendee, i) => <Attendee key={ attendee.id } id={ attendee.id } attendee = {attendee}/>)};
+{/* Attendees: {event.attendees.map(attendee => (<div><br /><li><ol>Name:{attendee.name} <br /> Position: {attendee.position} <br /> Company: {attendee.company} <button onClick={() => this.handleDeleteClick()}>DELETE</button>  </ol></li></div>))} */}
+<br /> <br />
+
+My diary of the day: <br /> <br />
+ "{event.diary}""
+</ol> 
     
     {/* <h3>Total Attendees: {this.props.attendeeCount}</h3> */}
 

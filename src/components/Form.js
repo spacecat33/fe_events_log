@@ -8,7 +8,7 @@ class Form extends Component {
     month: "",
     country: "",
     diary: ""
-    // attendee: "",
+    // attendees: "",
   }
 
   
@@ -51,10 +51,11 @@ class Form extends Component {
             <textarea id="diary" name="diary" value={ this.state.diary } onChange={ this.handleChange }></textarea>
           </div>
 
-          {/* <div>
+          <div>
             <p><label htmlFor="attendee">Attendee details:</label></p>
             <textarea id="attendee" name="attendee" value={ this.state.attendee } onChange={ this.handleChange }></textarea>
-          </div> */}
+          </div>
+          console.log({this.state.attendee})
           <br />
           <input type="submit" value="Create Event" /><br />
         </form>
