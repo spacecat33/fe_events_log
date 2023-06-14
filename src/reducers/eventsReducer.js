@@ -43,7 +43,6 @@ export const deleteAttendee = (attendee) => {
                 },
                
             })
-            .then(resp => resp.json())
             .then(data => {
                 dispatch({ type: "DELETE_ATTENDEE", payload: attendee })
                 // history.push("/events")

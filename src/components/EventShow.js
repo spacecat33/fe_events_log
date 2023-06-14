@@ -3,7 +3,7 @@ import Index from "./Index.js";
 import { useParams } from "react-router-dom";
 import { connect } from 'react-redux';
 import Attendee from './Attendee';
-import { deleteAttendee } from '../reducers/eventsReducer';
+// import { deleteAttendee } from '../reducers/eventsReducer';
 
 
 console.log("in eventshow")
@@ -43,8 +43,9 @@ Date:    {event.month} <br />
 <br /> <br />
 
 My diary of the day: <br /> <br />
- "{event.diary}""
+ "{event.diary}"
 </ol> 
+
     
     {/* <h3>Total Attendees: {this.props.attendeeCount}</h3> */}
 

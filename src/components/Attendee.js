@@ -9,9 +9,9 @@ import { deleteAttendee } from '../reducers/eventsReducer';
 class Attendee extends Component {
  
     handleDeleteClick = () => {
-        debugger;
+        // debugger;
           this.props.deleteAttendee(this.props.attendee)
-          console.log("attendees", this.props.match.params.attendees)
+        //   console.log("attendees", this.props.match.params.attendees)
         }
 
     render() {
@@ -53,7 +53,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = (dispatch) => {
     return {
     //   getEvents: () => dispatch(getEvents()),
-      deleteAttendee: dispatch(deleteAttendee())
+      deleteAttendee: (attendee) => dispatch(deleteAttendee(attendee))
     };
   };
 export default connect(mapStateToProps, mapDispatchToProps)(Attendee);

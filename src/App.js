@@ -12,6 +12,7 @@ import ErrorPage from './components/ErrorPage';
 import Form from './components/Form';
 import EventShow from './components/EventShow';
 import Attendee from './components/Attendee';
+import TestComponent from './components/TestComponent';
 
 
 
@@ -35,6 +36,7 @@ render() {
     return (
       <Router> 
     <Nav />
+    <TestComponent />
           <Switch>
         
             <Route exact path="/" component={ Home } />
