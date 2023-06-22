@@ -69,17 +69,25 @@ const eventsReducer = (state=initialState, action) => {
         
         case "DELETE_ATTENDEE":
             console.log("deleting attendees")
+
+            // return state.filter(attendee => attendee.id !== attendee.event_id);
             // return { ...state, attendees: [...state.events.attendees.filter(attendee => attendee.id !== action.id)]}
+            const event = state.events.find(event => action.payload.event_id === event.id) 
+            const updatedAttendees = event.attendees.filter(attendee => attendee.id !== action.payload.id)
+            const updatedEvent = {
+                ...event, attendees: updatedAttendees 
+            }
             // idx = state.findIndex(attendee => attendee.id === attendee.id);
             // return [...state.slice(0, idx), ...state.slice (idx +1)];
-            // let attendeeDel = state.event.map(attendee => {
-            //     if (attendee.id === action.payload.id) {
-            //         return action.payload
-            //     } else {
-            //         return event
-            //     }
-            // })
-            // return {...state, events: events.attendeeDel}
+            // 
+            let updatedEvents = state.events.map(ev => {
+                if (updatedEvent.id === ev.id) {
+                    return updatedEvent
+                } else {
+                    return ev
+                }
+            })
+            return {...state, events: updatedEvents}
 
         default:
             console.log()

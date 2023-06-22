@@ -20,10 +20,9 @@ class Form extends Component {
   }
 
   handleSubmit = e => {
-    console.log("submitted form and called addEvent") 
+    
     e.preventDefault();
 
-    this.props.addEvent(this.state, this.props.history);
   }
 
   render() {

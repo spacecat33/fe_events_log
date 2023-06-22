@@ -13,6 +13,7 @@ import Form from './components/Form';
 import EventShow from './components/EventShow';
 import Attendee from './components/Attendee';
 import TestComponent from './components/TestComponent';
+import ClickMe from './components/ClickMe';
 
 
 
@@ -36,6 +37,7 @@ render() {
     return (
       <Router> 
     <Nav />
+    <ClickMe />
     <TestComponent />
           <Switch>
         
